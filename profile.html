@@ -11,32 +11,59 @@
       <h1>Quiz App</h1>
     </header>
     <main>
-      <section class="question_card">
-        <h2>What property flips the axes in flexbox?</h2>
-        <button>Show Answer</button>
-        <div class="hashtags">
-          <button>#html</button><button>#flexbox</button><button>#css</button>
-        </div>
-        <img class="icon" src="assets/bookmark.png" />
-      </section>
-      <section class="question_card">
-        <h2>Lorem Ipsum?</h2>
-        <button>Show Answer</button>
-        <div class="hashtags">
-          <button>#html</button><button>#flexbox</button><button>#css</button>
-        </div>
-        <img class="icon" src="assets/bookmark.png" />
+      <section class="profile_page">
+        <section class="pic_and_name">
+          <img src="assets/user.png" alt="picture of myself" />
+          <h2>Lukas Klipp</h2>
+        </section>
+        <section class="About_me">
+          <h3>About me</h3>
+          <p>
+            Stare at the wall, play with food and get confused by dust. Chew on
+            cable always ensure to lay down in such a manner that tail can
+            lightly brush human's nose yet use lap as chair, catasstrophe check
+            cat door for ambush 10 times before coming in, use lap as chair, yet
+            chase mice. Mess up all the toilet paper scratch the box i could pee
+            on this if i had the energy so purr, shove bum in owner's face like
+            camera lens instead of drinking water from the cat bowl, make sure
+            to steal water from the toilet spread kitty litter all over house.
+          </p>
+        </section>
+        <section class="blocks">
+          <div class="question-block">
+            <p class="questions">?!</p>
+            <p class="number12">12</p>
+          </div>
+          <div class="bookmark-block">
+            <img
+              class="profile_bookmark"
+              alt="Bookmark Icon"
+              src="assets/bookmark black.png"
+            />
+            <p>4</p>
+          </div>
+        </section>
       </section>
       <section class="navbar">
-        <a class="first_icon" href="index.html"
+        <a aria-label="Home" class="first_icon" href="index.html"
           ><img src="assets/home.png"
         /></a>
-        <a class="second_icon" href="bookmarks.html"
+        <a aria-label="Bookmarks" class="second_icon" href="bookmarks.html"
           ><img src="assets/bookmark.png"
         /></a>
-        <a class="third_icon clicked" href="profile.html"
+        <a aria-label="Profile" class="third_icon clicked" href="profile.html"
           ><img src="assets/user.png"
         /></a>
+      </section>
+      <section class="settings">
+        <h3>Settings</h3>
+        <div class="darkmode">
+          <h4>Dark Mode</h4>
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+        </div>
       </section>
     </main>
   </body>
