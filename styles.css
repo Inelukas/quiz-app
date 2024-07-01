@@ -1,3 +1,9 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 h1 {
   background-color: blue;
   color: white;
@@ -6,4 +12,42 @@ h1 {
   width: 100%;
   height: 80px;
   padding-top: 40px;
+}
+
+.question_card {
+  width: 200px;
+  height: 150px;
+  border: 2px solid black;
+  background-color: lightgreen;
+  font-size: 12px;
+  text-align: center;
+  padding: 40px;
+}
+
+.question_card > button {
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.hashtags {
+  position: relative;
+  bottom: -45px;
+  left: -50px;
+}
+
+.hashtags button {
+  margin: 3px;
+  border-radius: 6px;
+  background-color: lightgray;
+}
+
+.icon {
+  width: 30px;
+  height: 40px;
+  background-color: white;
+  position: relative;
+  border: 1px solid black;
+  top: -190px;
+  right: -200px;
 }
