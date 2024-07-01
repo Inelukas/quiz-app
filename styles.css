@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -5,9 +9,13 @@ body {
   background-color: #fff8db;
 }
 
+header {
+  width: 100%;
+}
+
 h1 {
   background-color: #304463;
-  color: white;
+  color: #ffffff;
   border: 5px solid black;
   text-align: center;
   width: 100%;
