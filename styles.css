@@ -239,8 +239,6 @@ h1 {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
 }
 
 .slider:before {
@@ -251,7 +249,6 @@ h1 {
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
@@ -260,12 +257,9 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
