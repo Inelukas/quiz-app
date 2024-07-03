@@ -13,8 +13,9 @@
   }
   
   .pic_and_name img {
-    width: 150px;
+    width: 200px;
     float: left;
+    border-radius: 20px;
   }
   
   .pic_and_name h2 {
