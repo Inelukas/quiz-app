@@ -1,0 +1,51 @@
+.question_card {
+    position: relative;
+    width: 400px;
+    height: 150px;
+    background-color: var(--primary-color);
+    box-shadow: 5px 5px var(--side-color);
+    border-radius: 20px;
+    font-size: 12px;
+    text-align: center;
+    padding: 40px;
+    margin: 40px;
+  }
+  
+  .question_card > button {
+    border-color: var(--side-color);
+    margin-top: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    background-color: white;
+  }
+  
+  .answer {
+    margin-top: 25px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .hashtags {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+  
+  .hashtags button {
+    margin: 3px;
+    border-radius: 6px;
+    background-color: var(--side-color);
+    border: none;
+  }
+  
+  .icon {
+    max-width: 30px;
+    height: 40px;
+    position: absolute;
+    top: -20px;
+    right: 10px;
+  }
