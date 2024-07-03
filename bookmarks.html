@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="index.js" defer></script>
+    <script src="bookmarks.js" defer></script>
+    <script src="toggle-answer.js" defer></script>
   </head>
   <body data-js="body">
     <header>
@@ -13,8 +14,9 @@
     </header>
     <main>
       <section class="question_card">
-        <h2>What property flips the axes in flexbox?</h2>
-        <button>Show Answer</button>
+        <h2>What is the default value of the justify-content property in CSS Flexbox?</h2>
+        <button data-js="answer1button">Show Answer</button>
+        <h2 class="answer hidden" data-js="answer1">flex-start</h2>
         <div class="hashtags">
           <button>#html</button><button>#flexbox</button><button>#css</button>
         </div>

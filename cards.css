@@ -3,6 +3,7 @@
     width: 400px;
     height: 150px;
     background-color: var(--primary-color);
+    color: black;
     box-shadow: 5px 5px var(--side-color);
     border-radius: 20px;
     font-size: 12px;
