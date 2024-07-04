@@ -30,6 +30,10 @@
   display: none;
 }
 
+.booked {
+  display: none;
+}
+
 .hashtags {
   position: absolute;
   bottom: 10px;
@@ -50,3 +54,4 @@
   top: -20px;
   right: 10px;
 }
+
