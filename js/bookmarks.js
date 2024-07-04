@@ -29,6 +29,24 @@ function loadBookmark() {
   }
 }
 
+//removes the bookmark upon clicking the black bookmark button
+
+function toggleBookmark() {
+  const Bookmark = localStorage.getItem("Bookmark");
+  if (Bookmark === "activated") {
+    localStorage.setItem("Bookmark", "deactivated");
+    loadBookmark();
+  } else {
+    localStorage.setItem("Bookmark", "activated");
+  }
+}
+
+const bookmarkBlackElement = document.querySelector('[data-js="bookmark-button-black"]');
+
+bookmarkBlackElement.addEventListener("click", () => {
+  toggleBookmark()
+})
+
 //calls the function above upon opening the page
 
 document.addEventListener("DOMContentLoaded", loadBookmark)
