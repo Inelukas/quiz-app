@@ -22,6 +22,10 @@
   background-color: white;
 }
 
+.answerbutton:active {
+  background: var(--side-color);
+}
+
 .answer {
   margin-top: 25px;
 }

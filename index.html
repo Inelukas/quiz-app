@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/styles.css" />
-    <script src="/js/index.js" defer></script>
-    <script src="/js/toggle-answer.js" defer></script>
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/index.js" defer></script>
+    <script src="js/toggle-answer.js" defer></script>
   </head>
   <body data-js="body">
     <header>
@@ -18,7 +18,7 @@
           What is the default value of the justify-content property in CSS
           Flexbox?
         </h2>
-        <button data-js="answer1button">Show Answer</button>
+        <button class="answerbutton" data-js="answer1button">Show Answer</button>
         <h2 class="answer hidden" data-js="answer1">flex-start</h2>
         <div class="hashtags">
           <button>#html</button><button>#flexbox</button><button>#css</button>
@@ -31,7 +31,7 @@
           Which CSS property is used to set the space between flex items along
           the main axis?
         </h2>
-        <button data-js="answer2button">Show Answer</button>
+        <button class="answerbutton" data-js="answer2button">Show Answer</button>
         <h2 class="answer hidden" data-js="answer2">justify-content</h2>
         <div class="hashtags">
           <button>#html</button><button>#flexbox</button><button>#css</button>
@@ -41,7 +41,7 @@
       </section>
       <section class="question_card">
         <h2>Lorem Ipsum?</h2>
-        <button>Show Answer</button>
+        <button  class="answerbutton">Show Answer</button>
         <div class="hashtags">
           <button>#html</button><button>#flexbox</button><button>#css</button>
         </div>
@@ -49,23 +49,23 @@
       </section>
       <section class="question_card">
         <h2>Lorem Ipsum?</h2>
-        <button>Show Answer</button>
+        <button  class="answerbutton">Show Answer</button>
         <div class="hashtags">
           <button>#html</button><button>#flexbox</button><button>#css</button>
         </div>
         <img class="icon" alt="Bookmark Icon" src="assets/bookmark.png" />
       </section>
-      <section class="navbar">
-        <a aria-label="Home" class="first_icon clicked" href="index.html"
+      <nav class="navbar">
+        <a aria-label="Home" class="first-icon clicked" href="index.html"
           ><img src="assets/home.png"
         /></a>
-        <a aria-label="Bookmarks" class="second_icon" href="bookmarks.html"
+        <a aria-label="Bookmarks" class="second-icon" href="bookmarks.html"
           ><img src="assets/bookmark.png"
         /></a>
-        <a aria-label="Profile" class="third_icon" href="profile.html"
+        <a aria-label="Profile" class="third-icon" href="profile.html"
           ><img src="assets/user.png"
         /></a>
-      </section>
+      </nav>
     </main>
   </body>
 </html>

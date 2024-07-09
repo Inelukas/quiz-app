@@ -18,9 +18,9 @@
     top: 2px;
   }
   
-  .first_icon,
-  .second_icon,
-  .third_icon {
+  .first-icon,
+  .second-icon,
+  .third-icon {
     width: 40px;
     height: 40px;
     margin-top: 5px;
@@ -28,9 +28,9 @@
     border-radius: 50%;
   }
   
-  .first_icon:hover,
-  .second_icon:hover,
-  .third_icon:hover {
+  .first-icon:hover,
+  .second-icon:hover,
+  .third-icon:hover {
     border-radius: 50%;
     background-color: var(--hover-color);
   }

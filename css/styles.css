@@ -38,3 +38,14 @@ h1 {
   padding-top: 40px;
   margin-bottom: 20px;
 }
+
+.dark {
+  --primary-color: #FFF8DB;
+  --secondary-color: #7D8ABC;
+  --tertiary-color: #7D8ABC;
+  --side-color: #7D8ABC;
+  --element-color: black;
+  --element-color2: #ffffff;
+  --hover-color: lightblue;
+  --background-color: #304463;
+}
