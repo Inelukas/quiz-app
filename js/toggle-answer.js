@@ -1,4 +1,3 @@
-
 //creates one button element and one answer element for the first two cards
 
 const answer1Element = document.querySelector('[data-js="answer1"]');

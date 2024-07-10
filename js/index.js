@@ -69,3 +69,44 @@ bookmark2BlackElement.addEventListener("click", () => {
 //loads the state of the first bookmark upon opening the page
 
 document.addEventListener("DOMContentLoaded", loadBookmark)
+
+
+//creating a new card
+
+
+const newCardButton = document.querySelector('[data-js="card-button"]');
+const mainElement = document.querySelector("main");
+const popupElement = document.querySelector('[data-js="popup"]');
+const popupQuestion = document.querySelector('[data-js="popupQuestion"]');
+const popupAnswer = document.querySelector('[data-js="popupAnswer"]');
+const popupSubmitButton = document.querySelector('[data-js="popupSubmit"]');
+
+
+
+newCardButton.addEventListener("click", () => {
+  popupElement.classList.toggle("hidden");
+})
+
+popupSubmitButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  const newCard = document.createElement("section");
+  newCard.classList.add("question_card");
+  newCard.innerHTML = `
+        <h2>
+          ${popupQuestion.value}
+        </h2>
+        <button class="answerbutton" data-js="answer3button">Show Answer</button>
+        <h2 class="answer">${popupAnswer.value}</h2>
+        <div class="hashtags">
+          <button>#html</button><button>#flexbox</button><button>#css</button>
+        </div>
+        <img class="icon" alt="Bookmark Icon" src="assets/bookmark.png"/>
+        <img class="icon hidden" alt="Bookmark Icon" src="assets/bookmark black.png"/>
+  `;
+  mainElement.append(newCard)
+  popupElement.classList.toggle("hidden");
+})
+
+answer3Button.addEventListener("click", () => {
+  answer3Element.classList.toggle("hidden");
+});

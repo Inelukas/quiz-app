@@ -10,6 +10,7 @@
   </head>
   <body data-js="body">
     <header>
+      <button type="button" class="card-button" data-js="card-button">New Card</button>
       <h1>Quiz App</h1>
     </header>
     <main>
@@ -39,22 +40,6 @@
         <img class="icon" alt="Bookmark Icon" src="assets/bookmark.png" data-js="bookmark2-button"/>
         <img class="icon hidden" alt="Bookmark Icon" src="assets/bookmark black.png" data-js="bookmark2-button-black"/>
       </section>
-      <section class="question_card">
-        <h2>Lorem Ipsum?</h2>
-        <button  class="answerbutton">Show Answer</button>
-        <div class="hashtags">
-          <button>#html</button><button>#flexbox</button><button>#css</button>
-        </div>
-        <img class="icon" alt="Bookmark Icon" src="assets/bookmark.png" />
-      </section>
-      <section class="question_card">
-        <h2>Lorem Ipsum?</h2>
-        <button  class="answerbutton">Show Answer</button>
-        <div class="hashtags">
-          <button>#html</button><button>#flexbox</button><button>#css</button>
-        </div>
-        <img class="icon" alt="Bookmark Icon" src="assets/bookmark.png" />
-      </section>
       <nav class="navbar">
         <a aria-label="Home" class="first-icon clicked" href="index.html"
           ><img src="assets/home.png"
@@ -67,5 +52,12 @@
         /></a>
       </nav>
     </main>
+    <div class="popup hidden" data-js="popup">
+      <form class="popup-form">
+        <label for="question">Please enter your question.</label><input type="text" name="popupQuestion" id="question" data-js="popupQuestion" required>
+        <label for="answer">Please enter your answer.</label><input type="text" name="popupAnswer" id="answer" data-js="popupAnswer" required>
+        <button type="button" data-js="popupSubmit">Submit</button>
+      </form>
+    </div>
   </body>
 </html>
