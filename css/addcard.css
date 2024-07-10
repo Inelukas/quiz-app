@@ -1,0 +1,22 @@
+
+.addcard-main {
+  display: grid;
+  justify-items: center;
+}
+
+.addcard-form {
+    background: var(--tertiary-color);
+    color: var(--element-color);
+    border-radius: 10px;
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+    height: 60vh;
+    min-width: 40vw;
+    margin-top: 5vh;
+  }
+
+  .addcard-form button {
+    max-width: 60px;
+    justify-self: center;
+  }
