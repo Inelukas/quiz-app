@@ -79,6 +79,7 @@ const mainElement = document.querySelector("main");
 const popupElement = document.querySelector('[data-js="popup"]');
 const popupQuestion = document.querySelector('[data-js="popupQuestion"]');
 const popupAnswer = document.querySelector('[data-js="popupAnswer"]');
+const popupHash = document.querySelector('[data-js="popupHash"]');
 const popupSubmitButton = document.querySelector('[data-js="popupSubmit"]');
 
 
@@ -98,7 +99,7 @@ popupSubmitButton.addEventListener("click", (event) => {
         <button class="answerbutton" data-js="answer3button">Show Answer</button>
         <h2 class="answer">${popupAnswer.value}</h2>
         <div class="hashtags">
-          <button>#html</button><button>#flexbox</button><button>#css</button>
+          <button>${popupHash.value}</button>
         </div>
         <img class="icon" alt="Bookmark Icon" src="assets/bookmark.png"/>
         <img class="icon hidden" alt="Bookmark Icon" src="assets/bookmark black.png"/>
