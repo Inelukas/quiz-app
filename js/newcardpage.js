@@ -34,9 +34,11 @@ lengthChecker(hashInput,HashtagLimit);
 
 const mainElement = document.querySelector("main");
 const submitButton = document.querySelector('[data-js="submitButton"]');
+const clearButton = document.querySelector('[data-js="clearButton"]');
 
 submitButton.addEventListener("click", (event) => {
     event.preventDefault();
+    if (questionInput.value != "" && answerInput.value != "") {
     const newCard = document.createElement("section");
     newCard.classList.add("question_card");
     newCard.innerHTML = `
@@ -52,4 +54,16 @@ submitButton.addEventListener("click", (event) => {
           <img class="icon hidden" alt="Bookmark Icon" src="assets/bookmark black.png"/>
     `;
     mainElement.append(newCard)
+    clearContent()
+    }else{
+      alert("The question and answer fields mustn't be empty!")
+    }
   })
+
+function clearContent() {
+  questionInput.value = "";
+  answerInput.value = "";
+  hashInput.value = "";
+}
+
+clearButton.addEventListener("click", () => clearContent())

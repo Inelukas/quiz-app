@@ -8,11 +8,15 @@ const popupQuestion = document.querySelector('[data-js="popupQuestion"]');
 const popupAnswer = document.querySelector('[data-js="popupAnswer"]');
 const popupHash = document.querySelector('[data-js="popupHash"]');
 const popupSubmitButton = document.querySelector('[data-js="popupSubmit"]');
+const popupCancelButton = document.querySelector('[data-js="popupCancel"]');
 
 
 
 newCardButton.addEventListener("click", () => {
   popupElement.classList.toggle("hidden");
+  popupQuestion.value = "";
+  popupAnswer.value = "";
+  popupHash.value = "";
 })
 
 popupSubmitButton.addEventListener("click", (event) => {
@@ -32,6 +36,10 @@ popupSubmitButton.addEventListener("click", (event) => {
         <img class="icon hidden" alt="Bookmark Icon" src="assets/bookmark black.png"/>
   `;
   mainElement.append(newCard)
+  popupElement.classList.toggle("hidden");
+})
+
+popupCancelButton.addEventListener("click", () => {
   popupElement.classList.toggle("hidden");
 })
 

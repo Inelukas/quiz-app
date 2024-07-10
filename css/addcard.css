@@ -5,8 +5,8 @@
 }
 
 .addcard-form {
-    background: var(--tertiary-color);
-    color: var(--element-color);
+    background: var(--primary-color);
+    color: black;
     border-radius: 10px;
     display: grid;
     gap: 10px;
@@ -16,7 +16,12 @@
     margin-top: 5vh;
   }
 
-  .addcard-form button {
-    max-width: 60px;
+  .addcard-form div {
     justify-self: center;
+  }
+
+  button {
+    border-radius: 5px;
+    background: white;
+    border-color: var(--side-color);
   }
