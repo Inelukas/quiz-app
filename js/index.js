@@ -115,14 +115,24 @@ const popupQuestionLimit = document.querySelector('[data-js="questionlimit"]');
 const popupAnswerLimit = document.querySelector('[data-js="answerlimit"]');
 const popupHashtagLimit = document.querySelector('[data-js="hashtaglimit"]');
 
-popupQuestion.addEventListener("input", () => {
-  popupQuestionLimit.textContent = 150 - popupQuestion.value.length;
-})
+function lengthChecker(callback, text, input) {
+  callback.addEventListener("input", () => {
+    text.textContent = 150 - input.value.length;
+  })
+}
 
-popupAnswer.addEventListener("input", () => {
-  popupAnswerLimit.textContent = 150 - popupAnswer.value.length;
-})
+lengthChecker(popupQuestion,popupQuestionLimit,popupQuestion);
+lengthChecker(popupAnswer,popupAnswerLimit,popupAnswer);
+lengthChecker(popupHash,popupHashtagLimit,popupHash);
 
-popupHash.addEventListener("input", () => {
-  popupHashtagLimit.textContent = 150 - popupHash.value.length;
-})
+// popupQuestion.addEventListener("input", () => {
+//   popupQuestionLimit.textContent = 150 - popupQuestion.value.length;
+// })
+
+// popupAnswer.addEventListener("input", () => {
+//   popupAnswerLimit.textContent = 150 - popupAnswer.value.length;
+// })
+
+// popupHash.addEventListener("input", () => {
+//   popupHashtagLimit.textContent = 150 - popupHash.value.length;
+// })
