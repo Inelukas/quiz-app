@@ -21,7 +21,8 @@
   
   .first-icon,
   .second-icon,
-  .third-icon {
+  .third-icon,
+  .fourth-icon {
     width: 40px;
     height: 40px;
     margin-top: 5px;
@@ -31,7 +32,8 @@
   
   .first-icon:hover,
   .second-icon:hover,
-  .third-icon:hover {
+  .third-icon:hover,
+  .fourth-icon:hover {
     border-radius: 50%;
     background-color: var(--hover-color);
   }
