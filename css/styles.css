@@ -24,6 +24,7 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: var( --background-color);
+  margin-bottom: 10vh;
 }
 
 .dark {
