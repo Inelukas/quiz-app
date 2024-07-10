@@ -1,19 +1,3 @@
-//loads dark mode
-
-const bodyElement = document.querySelector('[data-js="body"]');
-
-function loadDarkMode() {
-  const darkMode = localStorage.getItem("darkMode");
-  if (darkMode === "enabled") {
-    bodyElement.classList.add("dark");
-  } else {
-    bodyElement.classList.remove("dark");
-  }
-}
-
-document.addEventListener("DOMContentLoaded", loadDarkMode);
-
-
 //creates an element for the first card (card is invisible in its unbookmarked state)
 
 const Card1 = document.querySelector('[data-js="card1"]');

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="js/newcardpage.js" defer></script>
+    <script src="js/darkmode.js" defer></script>
+  </head>
+  <body data-js="body">
+    <header>
+      <h1>Quiz App</h1>
+    </header>
+    <main class="addcard-main">
+            <form class="addcard-form">
+              <label for="question">Please enter your question.</label><textarea rows="4" type="text" id="question" data-js="Question" required></textarea>
+              <p><span data-js="questionlimit">150</span> character/s left</p>
+              <label for="answer">Please enter your answer.</label><textarea rows="4" type="text" id="answer" data-js="Answer" required></textarea>
+              <p><span data-js="answerlimit">150</span> character/s left</p>
+              <label for="hash">Would you like to add some hashtags?</label><input type="text" id="hash" data-js="Hash" required>
+              <p><span data-js="hashtaglimit">100</span> character/s left</p>
+              <button type="button" data-js="submitButton">Submit</button>
+            </form>
+      <nav class="navbar">
+        <a aria-label="Home" class="first-icon" href="index.html"
+          ><img src="assets/home.png"
+        /></a>
+        <a
+          aria-label="Bookmarks"
+          class="second-icon"
+          href="bookmarks.html"
+          ><img src="assets/bookmark.png"
+        /></a>
+        <a aria-label="Add Card" class="third-icon clicked" href="addcard.html"
+          ><img src="assets/add.png"
+        /></a>
+        <a aria-label="Profile" class="fourth-icon" href="profile.html"
+          ><img src="assets/user.png"
+        /></a>
+      </nav>
+    </main>
+  </body>
+</html>
