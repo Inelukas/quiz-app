@@ -96,7 +96,7 @@ popupSubmitButton.addEventListener("click", (event) => {
         <h2>
           ${popupQuestion.value}
         </h2>
-        <button class="answerbutton" data-js="answer3button">Show Answer</button>
+        <button class="answerbutton" data-js="answer2button">Show Answer</button>
         <h2 class="answer">${popupAnswer.value}</h2>
         <div class="hashtags">
           <button>${popupHash.value}</button>
@@ -108,6 +108,21 @@ popupSubmitButton.addEventListener("click", (event) => {
   popupElement.classList.toggle("hidden");
 })
 
-answer3Button.addEventListener("click", () => {
-  answer3Element.classList.toggle("hidden");
-});
+
+// adding character limits
+
+const popupQuestionLimit = document.querySelector('[data-js="questionlimit"]');
+const popupAnswerLimit = document.querySelector('[data-js="answerlimit"]');
+const popupHashtagLimit = document.querySelector('[data-js="hashtaglimit"]');
+
+popupQuestion.addEventListener("input", () => {
+  popupQuestionLimit.textContent = 150 - popupQuestion.value.length;
+})
+
+popupAnswer.addEventListener("input", () => {
+  popupAnswerLimit.textContent = 150 - popupAnswer.value.length;
+})
+
+popupHash.addEventListener("input", () => {
+  popupHashtagLimit.textContent = 150 - popupHash.value.length;
+})
