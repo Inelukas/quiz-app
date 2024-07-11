@@ -39,9 +39,7 @@ body {
 }
 
 .crazy {
-  -webkit-animation: bgcolor 20s infinite;
   animation: bgcolor 10s infinite;
-  -webkit-animation-direction: alternate;
   animation-direction: alternate;
 }
 
