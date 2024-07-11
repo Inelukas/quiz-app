@@ -34,7 +34,7 @@ formElement.addEventListener("submit", (event) => {
           <span>${popupHash.value}</span>
         </div>
         <img class="icon" alt="Bookmark Icon" src="assets/bookmark.png"/>
-        <img class="icon hidden" alt="Bookmark Icon" src="assets/bookmark black.png"/>
+        <img class="icon hidden" alt="Bookmark Icon" src="assets/bookmark-black.png"/>
   `;
   mainElement.append(newCard)
   popupQuestionLimit.textContent = popupAnswerLimit.textContent = popupHashtagLimit.textContent = 100;
