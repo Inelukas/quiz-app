@@ -1,3 +1,5 @@
+console.log("JavaScript wird ausgeführt");
+
 // adding character limits
 
 const questionInput = document.querySelector('[data-js="Question"]');
@@ -54,16 +56,18 @@ formElement.addEventListener("submit", (event) => {
           <img class="icon hidden" alt="Bookmark Icon" src="assets/bookmark-black.png"/>
     `;
     mainElement.append(newCard);
-    localStorage.setItem("NewCard", newCard.innerHTML);
+    let cardsArray = JSON.parse(localStorage.getItem("cardsArray")) || [];
+    cardsArray.push(newCard.innerHTML);
+    localStorage.setItem("cardsArray", JSON.stringify(cardsArray));
     clearContent();
-    QuestionLimit.textContent = AnswerLimit.textContent = HashtagLimit.textContent = 150;
+    QuestionLimit.textContent = AnswerLimit.textContent = HashtagLimit.textContent = 100;
   })
 
 function clearContent() {
   questionInput.value = "";
   answerInput.value = "";
   hashInput.value = "";
-  QuestionLimit.textContent = AnswerLimit.textContent = HashtagLimit.textContent = 150;
+  QuestionLimit.textContent = AnswerLimit.textContent = HashtagLimit.textContent = 100;
 }
 
 clearButton.addEventListener("click", () => clearContent())
