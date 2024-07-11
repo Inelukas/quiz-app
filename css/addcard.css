@@ -20,8 +20,12 @@
     justify-self: center;
   }
 
-  button {
+  .addcard-form button {
     border-radius: 5px;
     background: white;
     border-color: var(--side-color);
+  }
+
+  .addcard-form button:hover {
+    transform: scale(1.3);
   }

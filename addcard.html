@@ -13,15 +13,15 @@
       <h1>Quiz App</h1>
     </header>
     <main class="addcard-main">
-            <form class="addcard-form">
+            <form class="addcard-form" data-js="addcard-form">
               <label for="question">Please enter your question.</label><textarea rows="4" type="text" id="question" data-js="Question" required></textarea>
               <p><span data-js="questionlimit">150</span> character/s left</p>
               <label for="answer">Please enter your answer.</label><textarea rows="4" type="text" id="answer" data-js="Answer" required></textarea>
               <p><span data-js="answerlimit">150</span> character/s left</p>
-              <label for="hash">Would you like to add some hashtags?</label><input type="text" id="hash" data-js="Hash" required>
+              <label for="hash">Would you like to add some hashtags?</label><input type="text" id="hash" data-js="Hash">
               <p><span data-js="hashtaglimit">100</span> character/s left</p>
               <div>
-              <button type="button" data-js="submitButton">Submit</button>
+              <button type="submit" data-js="submitButton">Submit</button>
               <button type="button" data-js="clearButton">Clear</button>
             </div>
             </form>

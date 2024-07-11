@@ -58,7 +58,7 @@
       </nav>
     </main>
     <div class="popup hidden" data-js="popup">
-      <form class="popup-form">
+      <form class="popup-form" data-js="addcard-form">
         <label for="question">Please enter your question.</label><input type="text" name="popupQuestion" id="question" data-js="popupQuestion" required>
         <p><span data-js="questionlimit">150</span> character/s left</p>
         <label for="answer">Please enter your answer.</label><input type="text" name="popupAnswer" id="answer" data-js="popupAnswer" required>
@@ -66,7 +66,7 @@
         <label for="hash">Would you like to add some hashtags?</label><input type="text" name="popupHash" id="hash" data-js="popupHash">
         <p><span data-js="hashtaglimit">100</span> character/s left</p>
         <div>
-          <button type="button" data-js="popupSubmit">Submit</button>
+          <button type="submit" data-js="popupSubmit">Submit</button>
         <button type="button" data-js="popupCancel">Cancel</button>
       </div>
       </form>
