@@ -45,8 +45,13 @@ header {
     display: grid;
     gap: 10px;
     padding: 10px;
-    height: 40vh;
-    width: 40vw;
+    height: 45vh;
+    min-width: 40vw;
+  }
+
+  .popup-form textarea {
+    min-height: 30px;
+    max-height: 50px;
   }
 
   .popup div {

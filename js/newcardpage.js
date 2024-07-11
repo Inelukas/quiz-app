@@ -48,7 +48,7 @@ formElement.addEventListener("submit", (event) => {
           <button class="answerbutton" data-js="answer2button">Show Answer</button>
           <h2 class="answer">${answerInput.value}</h2>
           <div class="hashtags">
-            <button>${hashInput.value}</button>
+            <span>${hashInput.value}</span>
           </div>
           <img class="icon" alt="Bookmark Icon" src="assets/bookmark.png"/>
           <img class="icon hidden" alt="Bookmark Icon" src="assets/bookmark black.png"/>

@@ -16,6 +16,11 @@
     margin-top: 5vh;
   }
 
+  .addcard-form textarea {
+    min-height: 30px;
+    max-height: 80px;
+  }
+
   .addcard-form div {
     justify-self: center;
   }

@@ -31,19 +31,19 @@ formElement.addEventListener("submit", (event) => {
         <button class="answerbutton" data-js="answer2button">Show Answer</button>
         <h2 class="answer">${popupAnswer.value}</h2>
         <div class="hashtags">
-          <button>${popupHash.value}</button>
+          <span>${popupHash.value}</span>
         </div>
         <img class="icon" alt="Bookmark Icon" src="assets/bookmark.png"/>
         <img class="icon hidden" alt="Bookmark Icon" src="assets/bookmark black.png"/>
   `;
   mainElement.append(newCard)
-  popupQuestionLimit.textContent = popupAnswerLimit.textContent = popupHashtagLimit.textContent = 150;
+  popupQuestionLimit.textContent = popupAnswerLimit.textContent = popupHashtagLimit.textContent = 100;
   popupElement.classList.toggle("hidden");
 })
 
 popupCancelButton.addEventListener("click", () => {
   popupElement.classList.toggle("hidden");
-  popupQuestionLimit.textContent = popupAnswerLimit.textContent = popupHashtagLimit.textContent = 150;
+  popupQuestionLimit.textContent = popupAnswerLimit.textContent = popupHashtagLimit.textContent = 100;
 })
 
 
@@ -55,7 +55,7 @@ const popupHashtagLimit = document.querySelector('[data-js="hashtaglimit"]');
 
 function lengthChecker(inputfield, limittext) {
   inputfield.addEventListener("input", () => {
-    limittext.textContent = 150 - inputfield.value.length;
+    limittext.textContent = 100 - inputfield.value.length;
   })
 }
 
