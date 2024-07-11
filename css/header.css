@@ -53,3 +53,7 @@ header {
     justify-self: center;
   }
 
+  .popup button:hover {
+    transform: scale(1.3);
+  }
+

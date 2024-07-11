@@ -3,6 +3,7 @@
 
 const newCardButton = document.querySelector('[data-js="card-button"]');
 const mainElement = document.querySelector("main");
+const formElement = document.querySelector('[data-js="addcard-form"]');
 const popupElement = document.querySelector('[data-js="popup"]');
 const popupQuestion = document.querySelector('[data-js="popupQuestion"]');
 const popupAnswer = document.querySelector('[data-js="popupAnswer"]');
@@ -19,7 +20,7 @@ newCardButton.addEventListener("click", () => {
   popupHash.value = "";
 })
 
-popupSubmitButton.addEventListener("click", (event) => {
+formElement.addEventListener("submit", (event) => {
   event.preventDefault();
   const newCard = document.createElement("section");
   newCard.classList.add("question_card");
@@ -36,11 +37,13 @@ popupSubmitButton.addEventListener("click", (event) => {
         <img class="icon hidden" alt="Bookmark Icon" src="assets/bookmark black.png"/>
   `;
   mainElement.append(newCard)
+  popupQuestionLimit.textContent = popupAnswerLimit.textContent = popupHashtagLimit.textContent = 150;
   popupElement.classList.toggle("hidden");
 })
 
 popupCancelButton.addEventListener("click", () => {
   popupElement.classList.toggle("hidden");
+  popupQuestionLimit.textContent = popupAnswerLimit.textContent = popupHashtagLimit.textContent = 150;
 })
 
 
