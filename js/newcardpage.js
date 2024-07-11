@@ -11,7 +11,7 @@ const HashtagLimit = document.querySelector('[data-js="hashtaglimit"]');
 
 function lengthChecker(inputfield, limittext) {
     inputfield.addEventListener("input", () => {
-    limittext.textContent = 150 - inputfield.value.length;
+    limittext.textContent = 100 - inputfield.value.length;
   })
 }
 

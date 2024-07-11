@@ -37,3 +37,67 @@ body {
   --hover-color: lightblue;
   --background-color: #304463;
 }
+
+.crazy {
+  -webkit-animation: bgcolor 20s infinite;
+  animation: bgcolor 10s infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+@keyframes bgcolor {
+  0% {
+    --primary-color: #7D8ABC;
+  --secondary-color: #304463;
+  --tertiary-color: lightpink;
+  --side-color: #ffffff;
+  --element-color: black;
+  --element-color2: lightblue;
+  --hover-color: #FFF8DB;
+  --background-color: #FFC7ED;
+  }
+
+  30% {
+    --primary-color: #304463;
+  --secondary-color: lightpink;
+  --tertiary-color: #ffffff;
+  --side-color: black;
+  --element-color: lightblue;
+  --element-color2: #FFF8DB;
+  --hover-color: #FFC7ED;
+  --background-color: #7D8ABC;
+  }
+
+  60% {
+    --primary-color: lightpink;
+  --secondary-color: #ffffff;
+  --tertiary-color: black;
+  --side-color: lightblue;
+  --element-color: #FFF8DB;
+  --element-color2: #FFC7ED;
+  --hover-color: #7D8ABC;
+  --background-color: #304463;
+  }
+
+  90% {
+    --primary-color: #ffffff;
+  --secondary-color: black;
+  --tertiary-color: lightblue;
+  --side-color: #FFF8DB;
+  --element-color: #FFC7ED;
+  --element-color2: #7D8ABC;
+  --hover-color: #304463;
+  --background-color: lightpink;
+  }
+
+  100% {
+    --primary-color: black;
+  --secondary-color: lightblue;
+  --tertiary-color: #FFF8DB;
+  --side-color: #FFC7ED;
+  --element-color: #7D8ABC;
+  --element-color2: #304463;
+  --hover-color: lightpink;
+  --background-color: #ffffff;
+  }
+}
