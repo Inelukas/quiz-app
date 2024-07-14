@@ -1,11 +1,8 @@
-//creates one button element and one answer element for the first two cards
-
-let allAnswerButtons;
 
 //toggles the visibility of the first two cards' answers
 
-function addAnswerButtonListeners() {
-  allAnswerButtons = document.querySelectorAll(".answerbutton");
+export function addAnswerButtonListeners() {
+  let allAnswerButtons = document.querySelectorAll(".answerbutton");
 
   allAnswerButtons.forEach((answerButton) => {
     if (!answerButton.hasListener) {

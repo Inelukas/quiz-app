@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App</title>
     <link rel="stylesheet" href="css/styles.css" />
-    <script src="js/index.js" defer></script>
-    <script src="js/newcard.js" defer></script>
-    <script src="js/colormode.js" defer></script>
-    <script src="js/loadNewCard.js" defer></script>
-    <script src="js/toggle-answer.js" defer></script>
+    <script src="js/index.js" type="module" defer></script>
+    <script src="js/newcard.js" type="module" defer></script>
+    <script src="js/colormode.js" type="module" defer></script>
+    <script src="js/loadNewCard.js" type="module" defer></script>
+    <script src="js/bookmarks.js" type="module" defer></script>
+    <script src="js/toggle-answer.js" type="module" defer></script>
   </head>
   <body data-js="body">
     <header>
@@ -27,8 +28,8 @@
         <div class="hashtags">
           <span>#html</span><span>#flexbox</span><span>#css</span>
         </div>
-        <img class="icon" alt="Bookmark Icon" src="assets/bookmark.png" data-js="bookmark-button"/>
-        <img class="icon" alt="Bookmark Icon" src="assets/bookmark-black.png" data-js="bookmark-button-black"/>
+        <img class="icon hidden" alt="Bookmark Icon" src="assets/bookmark.png" id="#card1" data-js="bookmark-white"/>
+        <img class="icon" alt="Bookmark Icon Black" src="assets/bookmark-black.png" id="#card1" data-js="bookmark-black"/>
       </section>
       <section class="question_card" id="card2">
         <h2>
@@ -40,8 +41,8 @@
         <div class="hashtags">
           <span>#html</span><span>#flexbox</span><span>#css</span>
         </div>
-        <img class="icon" alt="Bookmark Icon" src="assets/bookmark.png" data-js="bookmark2-button"/>
-        <img class="icon hidden" alt="Bookmark Icon" src="assets/bookmark-black.png" data-js="bookmark2-button-black"/>
+        <img class="icon" alt="Bookmark Icon" src="assets/bookmark.png" id="#card2" data-js="bookmark-white"/>
+        <img class="icon hidden" alt="Bookmark Icon Black" src="assets/bookmark-black.png" id="#card2" data-js="bookmark-black"/>
       </section>
       <nav class="navbar">
         <a aria-label="Home" class="first-icon clicked" href="index.html"

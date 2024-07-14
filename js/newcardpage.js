@@ -1,3 +1,8 @@
+import { addWhiteBookmarkListeners } from "./bookmarks.js";
+import { addBlackBookmarkListeners } from "./bookmarks.js";
+import { addBookmarkListeners } from "./bookmarks.js";
+import { addAnswerButtonListeners } from "./toggle-answer.js";
+
 // adding character limits
 
 const questionInput = document.querySelector('[data-js="Question"]');
@@ -56,8 +61,8 @@ formElement.addEventListener("submit", (event) => {
           <div class="hashtags">
             <span>${hashInput.value}</span>
           </div>
-          <img class="icon" alt="Bookmark Icon" src="assets/bookmark.png"/>
-          <img class="icon hidden" alt="Bookmark Icon" src="assets/bookmark-black.png"/>
+          <img class="icon" alt="Bookmark Icon" src="assets/bookmark.png" id="#card${counter}" data-js="bookmark-white"/>
+          <img class="icon hidden" alt="Bookmark Icon Black" src="assets/bookmark-black.png" id="#card${counter}" data-js="bookmark-black"/>
     `;
     mainElement.append(newCard);
     counter++;
@@ -65,6 +70,7 @@ formElement.addEventListener("submit", (event) => {
     let cardsArray = JSON.parse(localStorage.getItem("cardsArray")) || [];
     cardsArray.push(newCard.innerHTML);
     addAnswerButtonListeners();
+    addBookmarkListeners();
     localStorage.setItem("cardsArray", JSON.stringify(cardsArray));
     clearContent();
     QuestionLimit.textContent = AnswerLimit.textContent = HashtagLimit.textContent = 100;
@@ -78,3 +84,5 @@ function clearContent() {
 }
 
 clearButton.addEventListener("click", () => clearContent())
+document.addEventListener("DOMContentLoaded", addBookmarkListeners);
+document.addEventListener("DOMContentLoaded", addAnswerButtonListeners);

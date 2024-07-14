@@ -1,36 +1,46 @@
-//creates an element for the first card (card is invisible in its unbookmarked state)
 
-const Card1 = document.querySelector('[data-js="card1"]');
 
-//hides or shows the card depending on its state
+//toggles the display of each logo and de-/activates a bookmark
 
-function loadBookmark() {
-  const Bookmark = localStorage.getItem("Bookmark");
-  if (Bookmark === "activated") {
-    Card1.classList.remove("hidden");
-  } else {
-    Card1.classList.add("hidden");
+export function addWhiteBookmarkListeners() {
+  let AllWhiteBookmarkElements = document.querySelectorAll('[data-js="bookmark-white"]');
+
+  AllWhiteBookmarkElements.forEach((whiteBookmark) => {
+    if (!whiteBookmark.hasListener) {
+    whiteBookmark.addEventListener("click", () => {
+      const cardAttribute = whiteBookmark.getAttribute("id");
+      const currentCard = document.querySelector(cardAttribute);
+      const bookmarkWhiteElement = currentCard.querySelector('[data-js="bookmark-white"]');
+      const bookmarkBlackElement = currentCard.querySelector('[data-js="bookmark-black"]');
+      bookmarkWhiteElement.classList.toggle("hidden");
+      bookmarkBlackElement.classList.toggle("hidden");
+    });
+    whiteBookmark.hasListener = true;
   }
+  })
 }
 
-//removes the bookmark upon clicking the black bookmark button
+export function addBlackBookmarkListeners() {
+  let AllBlackBookmarkElements = document.querySelectorAll('[data-js="bookmark-black"]');
 
-function toggleBookmark() {
-  const Bookmark = localStorage.getItem("Bookmark");
-  if (Bookmark === "activated") {
-    localStorage.setItem("Bookmark", "deactivated");
-    loadBookmark();
-  } else {
-    localStorage.setItem("Bookmark", "activated");
+  AllBlackBookmarkElements.forEach((blackBookmark) => {
+    if (!blackBookmark.hasListener) {
+    blackBookmark.addEventListener("click", () => {
+      const cardAttribute = blackBookmark.getAttribute("id");
+      const currentCard = document.querySelector(cardAttribute);
+      const bookmarkWhiteElement = currentCard.querySelector('[data-js="bookmark-white"]');
+      const bookmarkBlackElement = currentCard.querySelector('[data-js="bookmark-black"]');
+      bookmarkBlackElement.classList.toggle("hidden");
+      bookmarkWhiteElement.classList.toggle("hidden");
+    });
+    blackBookmark.hasListener = true;
   }
+  })
 }
 
-const bookmarkBlackElement = document.querySelector('[data-js="bookmark-button-black"]');
+export function addBookmarkListeners() {
+  addWhiteBookmarkListeners()
+  addBlackBookmarkListeners()
+}
 
-bookmarkBlackElement.addEventListener("click", () => {
-  toggleBookmark()
-})
-
-//calls the function above upon opening the page
-
-document.addEventListener("DOMContentLoaded", loadBookmark)
+document.addEventListener("DOMContentLoaded", addBookmarkListeners);

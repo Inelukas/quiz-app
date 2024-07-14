@@ -1,8 +1,10 @@
 //function to load new card
 
 let counter = 2;
+const mainElement = document.querySelector("main");
+let allAnswerButtons = document.querySelectorAll(".answerbutton");
 
-function loadCard() {
+export function loadCard() {
     let cardsArray = JSON.parse(localStorage.getItem("cardsArray")) || [];
     cardsArray.forEach(cardHTML => {
         const newCard = document.createElement("section");
