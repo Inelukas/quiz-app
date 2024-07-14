@@ -1,11 +1,9 @@
-// adding character limits
-
-const questionInput = document.querySelector('[data-js="Question"]');
-const answerInput = document.querySelector('[data-js="Answer"]');
-const hashInput = document.querySelector('[data-js="Hash"]');
-const QuestionLimit = document.querySelector('[data-js="questionlimit"]');
-const AnswerLimit = document.querySelector('[data-js="answerlimit"]');
-const HashtagLimit = document.querySelector('[data-js="hashtaglimit"]');
+import { loadCard } from "../Cards/Cards.js";
+import { addAnswerButtonListeners } from "../Cards/Cards.js";
+import { loadDarkMode } from "../Colormodes/colormodes.js";
+import { loadCrazyMode } from "../Colormodes/colormodes.js";
+import { addBookmarkListeners } from "../Bookmarks/bookmarks.js";
+import { bodyElement, questionInput, answerInput, hashInput, QuestionLimit, AnswerLimit, HashtagLimit, mainElement, formElement, clearButton } from "../lib/data.js";
 
 function lengthChecker(inputfield, limittext) {
     inputfield.addEventListener("input", () => {
@@ -32,11 +30,6 @@ lengthChecker(hashInput,HashtagLimit);
 
 //adding cards
 
-const mainElement = document.querySelector("main");
-const formElement = document.querySelector('[data-js="addcard-form"]');
-const submitButton = document.querySelector('[data-js="submitButton"]');
-const clearButton = document.querySelector('[data-js="clearButton"]');
-
 formElement.addEventListener("submit", (event) => {
     event.preventDefault();
     if (!localStorage.getItem("Counter")) {
@@ -56,16 +49,17 @@ formElement.addEventListener("submit", (event) => {
           <div class="hashtags">
             <span>${hashInput.value}</span>
           </div>
-          <img class="icon" alt="Bookmark Icon" src="assets/bookmark.png"/>
-          <img class="icon hidden" alt="Bookmark Icon" src="assets/bookmark-black.png"/>
+          <img class="icon" alt="Bookmark Icon" src="assets/bookmark.png" id="#card${counter}" data-js="bookmark-button-white"/>
+          <img class="icon hidden" alt="Bookmark Icon" src="assets/bookmark-black.png" id="#card${counter}" data-js="bookmark-button-black"/>
     `;
     mainElement.append(newCard);
     counter++;
     localStorage.setItem("Counter", counter);
     let cardsArray = JSON.parse(localStorage.getItem("cardsArray")) || [];
     cardsArray.push(newCard.innerHTML);
-    addAnswerButtonListeners();
     localStorage.setItem("cardsArray", JSON.stringify(cardsArray));
+    addAnswerButtonListeners();
+    addBookmarkListeners();
     clearContent();
     QuestionLimit.textContent = AnswerLimit.textContent = HashtagLimit.textContent = 100;
   })
@@ -78,3 +72,11 @@ function clearContent() {
 }
 
 clearButton.addEventListener("click", () => clearContent())
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadDarkMode();
+  loadCrazyMode();
+  loadCard();
+  addAnswerButtonListeners();
+  addBookmarkListeners();
+});

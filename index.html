@@ -5,15 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App</title>
     <link rel="stylesheet" href="css/styles.css" />
-    <script src="js/index.js" defer></script>
-    <script src="js/newcard.js" defer></script>
-    <script src="js/colormode.js" defer></script>
-    <script src="js/loadNewCard.js" defer></script>
-    <script src="js/toggle-answer.js" defer></script>
+    <script src="js/index.js" type="module" defer></script>
+    <!-- <script src="js/newcard.js" defer></script> -->
+
   </head>
   <body data-js="body">
     <header>
-      <button type="button" class="card-button" data-js="card-button">New Card</button>
+      <!-- <button type="button" class="card-button" data-js="card-button">New Card</button> -->
       <h1>Quiz App</h1>
     </header>
     <main>
@@ -27,8 +25,8 @@
         <div class="hashtags">
           <span>#html</span><span>#flexbox</span><span>#css</span>
         </div>
-        <img class="icon" alt="Bookmark Icon" src="assets/bookmark.png" data-js="bookmark-button"/>
-        <img class="icon" alt="Bookmark Icon" src="assets/bookmark-black.png" data-js="bookmark-button-black"/>
+        <img class="icon hidden" alt="Bookmark Icon" src="assets/bookmark.png" id="#card1" data-js="bookmark-button-white"/>
+        <img class="icon" alt="Bookmark Icon" src="assets/bookmark-black.png" id="#card1" data-js="bookmark-button-black"/>
       </section>
       <section class="question_card" id="card2">
         <h2>
@@ -40,8 +38,8 @@
         <div class="hashtags">
           <span>#html</span><span>#flexbox</span><span>#css</span>
         </div>
-        <img class="icon" alt="Bookmark Icon" src="assets/bookmark.png" data-js="bookmark2-button"/>
-        <img class="icon hidden" alt="Bookmark Icon" src="assets/bookmark-black.png" data-js="bookmark2-button-black"/>
+        <img class="icon" alt="Bookmark Icon" src="assets/bookmark.png" id="#card2" data-js="bookmark-button-white"/>
+        <img class="icon hidden" alt="Bookmark Icon" src="assets/bookmark-black.png" id="#card2" data-js="bookmark-button-black"/>
       </section>
       <nav class="navbar">
         <a aria-label="Home" class="first-icon clicked" href="index.html"
@@ -58,7 +56,7 @@
         /></a>
       </nav>
     </main>
-    <div class="popup hidden" data-js="popup">
+    <!-- <div class="popup hidden" data-js="popup">
       <form class="popup-form" data-js="addcard-form">
         <label for="question">Please enter your question.</label><textarea type="text" rows="2" name="popupQuestion" id="question" data-js="popupQuestion" maxlength="100" required></textarea>
         <p><span data-js="questionlimit">100</span> character/s left</p>
@@ -69,7 +67,7 @@
         <div>
           <button type="submit" data-js="popupSubmit">Submit</button>
         <button type="button" data-js="popupCancel">Cancel</button>
-      </div>
+      </div> -->
       </form>
     </div>
   </body>
