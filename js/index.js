@@ -1,8 +1,9 @@
 import { loadCard } from "../Cards/Cards.js";
-import { addAnswerButtonListeners } from "../Cards/Cards.js";
+import { addAnswerButtonListeners, fetchAndRenderCardContent } from "../Cards/Cards.js";
 import { loadDarkMode } from "../Colormodes/colormodes.js";
 import { loadCrazyMode } from "../Colormodes/colormodes.js";
 import { addBookmarkListeners } from "../Bookmarks/bookmarks.js";
+import { fetchedCardsButton } from "../lib/data.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -12,3 +13,5 @@ document.addEventListener("DOMContentLoaded", () => {
   addAnswerButtonListeners();
   addBookmarkListeners();
 });
+
+fetchedCardsButton.addEventListener("click", () => fetchAndRenderCardContent())

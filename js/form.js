@@ -38,15 +38,16 @@ lengthChecker(hashInput,HashtagLimit);
 
 formElement.addEventListener("submit", (event) => {
     event.preventDefault();
-    if (!localStorage.getItem("Counter")) {
-      localStorage.setItem("Counter", "3");
-    }
-    let counter = parseInt(localStorage.getItem("Counter"));
-    console.log("Counter: ", counter);
-    const newCard = document.createElement("section");
-    newCard.classList.add("question_card");
-    newCard.setAttribute("id", `card${counter}`);
+    let counter = JSON.parse(localStorage.getItem("Counter")) || ["2"];
+    // if (!localStorage.getItem("Counter")) {
+    //   localStorage.setItem("Counter", "3");
+    // }
+    // let counter = parseInt(localStorage.getItem("Counter"));
+    const newCard = document.createElement('div');
+    counter++;
+    console.log("Counter: ", counter); //test
     newCard.innerHTML = `
+          <section class="question_card" id="card${counter}">
           <h2>
             ${questionInput.value}
           </h2>
@@ -57,9 +58,9 @@ formElement.addEventListener("submit", (event) => {
           </div>
           <img class="icon" alt="Bookmark Icon" src="assets/bookmark.png" id="#card${counter}" data-js="bookmark-button-white"/>
           <img class="icon hidden" alt="Bookmark Icon" src="assets/bookmark-black.png" id="#card${counter}" data-js="bookmark-button-black"/>
+          </section>
     `;
     mainElement.append(newCard);
-    counter++;
     localStorage.setItem("Counter", counter);
     let cardsArray = JSON.parse(localStorage.getItem("cardsArray")) || [];
     cardsArray.push(newCard.innerHTML);
