@@ -13,6 +13,7 @@
 //   allAnswerButtons = document.querySelectorAll(".answerbutton");
 // }
 
+
 export function addBookmarkListeners() {
   let allWhiteBookmarks = document.querySelectorAll('[data-js="bookmark-button-white"]');
   let allBlackBookmarks = document.querySelectorAll('[data-js="bookmark-button-black"]');
@@ -46,6 +47,10 @@ export function addBookmarkListeners() {
   })
 }
 
+
+function updateBookmarks() {
+  
+}
 
 
 

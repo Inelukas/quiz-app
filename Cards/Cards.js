@@ -3,7 +3,6 @@ import { mainElement } from "../lib/data.js";
 let counter = 2;
 
 export function loadCard() {
-    let allAnswerButtons = document.querySelectorAll(".answerbutton");
     let cardsArray = JSON.parse(localStorage.getItem("cardsArray")) || [];
     cardsArray.forEach(cardHTML => {
         const newCard = document.createElement("section");
@@ -13,7 +12,20 @@ export function loadCard() {
         newCard.innerHTML = cardHTML;
         mainElement.append(newCard);
     });
-    allAnswerButtons = document.querySelectorAll(".answerbutton");
+    let allAnswerButtons = document.querySelectorAll(".answerbutton");
+  }
+
+  export function loadBookmarkedCard() {
+    let bookmarksArray = JSON.parse(localStorage.getItem("bookmarkArray")) || [];
+    bookmarksArray.forEach(cardHTML => {
+        const newCard = document.createElement("section");
+        counter++;
+        newCard.classList.add("question_card");
+        newCard.setAttribute("id", `card${counter}`);
+        newCard.innerHTML = cardHTML;
+        mainElement.append(newCard);
+    });
+    let allAnswerButtons = document.querySelectorAll(".answerbutton");
   }
 
   export function addAnswerButtonListeners() {

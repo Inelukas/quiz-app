@@ -5,7 +5,6 @@
   }
   
   .pic_and_name {
-    width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -108,7 +107,6 @@
     padding-right: 5%;
     padding-bottom: 15px;
     margin-top: 30px;
-    gap: 200px;
     font-size: 20px;
   }
 
@@ -116,12 +114,13 @@
     text-decoration: underline double;
     color: red;
     text-underline-offset: 5px;
+    font-size: 14px;
   }
   
   .switch {
     position: relative;
     display: inline-block;
-    width: 60px;
+    min-width: 60px;
     height: 34px;
   }
   
