@@ -17,30 +17,27 @@
               <p><span data-js="questionlimit">100</span> character/s left</p>
               <label for="answer">Please enter your answer.</label><textarea rows="4" type="text" id="answer" data-js="Answer" maxlength="100" required></textarea>
               <p><span data-js="answerlimit">100</span> character/s left</p>
-              <label for="hash">Would you like to add some hashtags?</label><input type="text" id="hash" data-js="Hash" maxlength="100">
-              <p><span data-js="hashtaglimit">100</span> character/s left</p>
+              <label for="hash">Would you like to add some hashtags?</label><input type="text" id="hash" data-js="Hash" maxlength="50">
+              <p><span data-js="hashtaglimit">50</span> character/s left</p>
               <div>
               <button type="submit" data-js="submitButton">Submit</button>
               <button type="button" data-js="clearButton">Clear</button>
             </div>
             </form>
-      <nav class="navbar">
-        <a aria-label="Home" class="first-icon" href="index.html"
-          ><img src="assets/home.png"
-        /></a>
-        <a
-          aria-label="Bookmarks"
-          class="second-icon"
-          href="bookmarks.html"
-          ><img src="assets/bookmark.png"
-        /></a>
-        <a aria-label="Add Card" class="third-icon clicked" href="addcard.html"
-          ><img src="assets/add.png"
-        /></a>
-        <a aria-label="Profile" class="fourth-icon" href="profile.html"
-          ><img src="assets/user.png"
-        /></a>
-      </nav>
+            <nav class="navbar">
+              <a aria-label="Home" class="icon1" href="index.html"
+                ><img src="assets/home.png"
+              /><div class="iconbackground"></div></a>
+              <a aria-label="Bookmarks" class="icon2" href="bookmarks.html"
+                ><img src="assets/bookmark.png"
+              /><div class="iconbackground"></div></a>
+              <a aria-label="Add Card" class="icon3" href="form.html"
+                ><img src="assets/add.png"
+              /><div class="iconbackground clicked"></div></a>
+              <a aria-label="Profile" class="icon4" href="profile.html"
+                ><img src="assets/user.png"
+              /><div class="iconbackground"></div></a>
+            </nav>
     </main>
   </body>
 </html>

@@ -1,6 +1,7 @@
 .question_card {
   position: relative;
-  width: 30vw;
+  min-width: 400px;
+  max-width: 30vw;
   min-height: 20vh;
   background-color: var(--primary-color);
   color: black;
@@ -44,13 +45,12 @@
   position: absolute;
   bottom: 10px;
   left: 10px;
-  max-width: 30vw;
+  max-width: 90%;
 }
 
 .hashtags span {
-  font-size: 16px;
+  font-size: 12px;
   margin: 3px;
-  padding: 0px 5px;
   border-radius: 6px;
   background-color: var(--side-color);
   border: none;

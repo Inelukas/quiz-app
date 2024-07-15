@@ -6,9 +6,15 @@ import { addBookmarkListeners } from "../Bookmarks/bookmarks.js";
 import { bodyElement, questionInput, answerInput, hashInput, QuestionLimit, AnswerLimit, HashtagLimit, mainElement, formElement, clearButton } from "../lib/data.js";
 
 function lengthChecker(inputfield, limittext) {
+    if (inputfield === hashInput) {
+      inputfield.addEventListener("input", () => {
+        limittext.textContent = 50 - inputfield.value.length;
+    })
+  }else{
     inputfield.addEventListener("input", () => {
     limittext.textContent = 100 - inputfield.value.length;
   })
+}
 }
 
 lengthChecker(questionInput,QuestionLimit);
@@ -61,14 +67,16 @@ formElement.addEventListener("submit", (event) => {
     addAnswerButtonListeners();
     addBookmarkListeners();
     clearContent();
-    QuestionLimit.textContent = AnswerLimit.textContent = HashtagLimit.textContent = 100;
+    QuestionLimit.textContent = AnswerLimit.textContent = 100;
+    HashtagLimit.textContent = 50;
   })
 
 function clearContent() {
   questionInput.value = "";
   answerInput.value = "";
   hashInput.value = "";
-  QuestionLimit.textContent = AnswerLimit.textContent = HashtagLimit.textContent = 100;
+  QuestionLimit.textContent = AnswerLimit.textContent = 100;
+  HashtagLimit.textContent = 50;
 }
 
 clearButton.addEventListener("click", () => clearContent())
