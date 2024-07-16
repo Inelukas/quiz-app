@@ -2,7 +2,7 @@ import { loadCard } from "../Cards/Cards.js";
 import { addAnswerButtonListeners } from "../Cards/Cards.js";
 import { loadDarkMode } from "../Colormodes/colormodes.js";
 import { loadCrazyMode } from "../Colormodes/colormodes.js";
-import { addBookmarkListeners } from "../Bookmarks/bookmarks.js";
+import { addBookmarkListeners, loadBookmark } from "../Bookmarks/bookmarks.js";
 import { bodyElement, questionInput, answerInput, hashInput, QuestionLimit, AnswerLimit, HashtagLimit, mainElement, formElement, clearButton } from "../lib/data.js";
 
 function lengthChecker(inputfield, limittext) {
@@ -21,24 +21,12 @@ lengthChecker(questionInput,QuestionLimit);
 lengthChecker(answerInput,AnswerLimit);
 lengthChecker(hashInput,HashtagLimit);
 
-// popupQuestion.addEventListener("input", () => {
-//   popupQuestionLimit.textContent = 150 - popupQuestion.value.length;
-// })
-
-// popupAnswer.addEventListener("input", () => {
-//   popupAnswerLimit.textContent = 150 - popupAnswer.value.length;
-// })
-
-// popupHash.addEventListener("input", () => {
-//   popupHashtagLimit.textContent = 150 - popupHash.value.length;
-// })
-
 
 //adding cards
 
 formElement.addEventListener("submit", (event) => {
     event.preventDefault();
-    let counter = JSON.parse(localStorage.getItem("Counter")) || ["2"];
+    let counter = JSON.parse(localStorage.getItem("Counter")) || [];
     // if (!localStorage.getItem("Counter")) {
     //   localStorage.setItem("Counter", "3");
     // }
@@ -88,4 +76,5 @@ document.addEventListener("DOMContentLoaded", () => {
   loadCard();
   addAnswerButtonListeners();
   addBookmarkListeners();
+  loadBookmark();
 });

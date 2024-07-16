@@ -1,23 +1,54 @@
 import { bodyElement, mainElement } from "../lib/data.js";
-import { addBookmarkListeners } from "../Bookmarks/bookmarks.js";
+import { addBookmarkListeners, loadBookmark } from "../Bookmarks/bookmarks.js";
 
 
 export function loadCard() {
-  if (bodyElement.id === "mainpage") {
-    let fetchedCardsArray = JSON.parse(localStorage.getItem("fetchedCardsArray")) || [];
-    fetchedCardsArray.forEach(cardHTML => {
-        const newCard = document.createElement("div");
-        newCard.innerHTML = cardHTML;
-        mainElement.append(newCard);
-  })
-}
     let cardsArray = JSON.parse(localStorage.getItem("cardsArray")) || [];
     cardsArray.forEach(cardHTML => {
         const newCard = document.createElement("div");
         newCard.innerHTML = cardHTML;
+        if (bodyElement.id === "formpage") {
+          const sectionElement = newCard.querySelector("section");
+          if (!sectionElement.classList.contains("fetched")) {
+            mainElement.append(newCard);
+        }
+      }else {
         mainElement.append(newCard);
-    });
-  }
+      }
+  })
+}
+
+export function loadCardsOnBookmarkPage() {
+  let cardsArray = JSON.parse(localStorage.getItem("cardsArray")) || [];
+  let localBookmarks = JSON.parse(localStorage.getItem("Bookmarks")) || [];
+    cardsArray.forEach(cardHTML => {
+        const newCard = document.createElement("div");
+        newCard.innerHTML = cardHTML;
+        const currentCardSectionElement = newCard.querySelector("section");
+        const cardAttribute = currentCardSectionElement.getAttribute("id");
+    if (localBookmarks.includes(`#${cardAttribute}`)) {
+      const currentWhiteBookmark = newCard.querySelector('[data-js="bookmark-button-white"]');
+      const currentBlackBookmark = newCard.querySelector('[data-js="bookmark-button-black"]');
+      currentWhiteBookmark.classList.toggle("hidden");
+      currentBlackBookmark.classList.toggle("hidden");
+      mainElement.append(newCard);
+    }
+      })
+    }
+  // }else {
+  //   {
+  //     let fetchedCardsArray = JSON.parse(localStorage.getItem("fetchedCardsArray")) || [];
+  //     let cardsArray = JSON.parse(localStorage.getItem("cardsArray")) || [];
+  //     const joinedArray = fetchedCardsArray.concat(cardsArray)
+  //     joinedArray.forEach(cardHTML => {
+  //         const newCard = document.createElement("div");
+  //         newCard.innerHTML = cardHTML;
+  //         const whiteBookmarkElement = newCard.querySelector('[data-js="bookmark-button-white"]');
+  //         if (whiteBookmarkElement.classList.includes("hidden")) {
+  //         mainElement.append(newCard);
+  //         }
+  //   })
+  //   }
 
   export function addAnswerButtonListeners() {
     let allAnswerButtons = document.querySelectorAll(".answerbutton");
@@ -48,10 +79,10 @@ export function loadCard() {
       const questionData = item.question;
       const answerData = item.correct_answer;
       const newCard = document.createElement("div");
-      let counter = JSON.parse(localStorage.getItem("Counter")) || ["2"];
+      let counter = JSON.parse(localStorage.getItem("Counter")) || [];
       counter++;
     newCard.innerHTML = `
-          <section class="question_card" id="card${counter}">
+          <section class="question_card fetched" id="card${counter}">
           <h2>
             ${questionData}
           </h2>
@@ -63,10 +94,16 @@ export function loadCard() {
     `;
     mainElement.append(newCard);
     localStorage.setItem("Counter", counter);
-    let fetchedCardsArray = JSON.parse(localStorage.getItem("fetchedCardsArray")) || [];
-    fetchedCardsArray.push(newCard.innerHTML);
-    localStorage.setItem("fetchedCardsArray", JSON.stringify(fetchedCardsArray));
+    let cardsArray = JSON.parse(localStorage.getItem("cardsArray")) || [];
+    cardsArray.push(newCard.innerHTML);
+    localStorage.setItem("cardsArray", JSON.stringify(cardsArray));
     addAnswerButtonListeners();
     addBookmarkListeners();
     })
+  }
+
+  export function firstCardLoad() {
+    if (!localStorage.getItem("cardsArray")) {
+      fetchAndRenderCardContent()
+    }
   }
