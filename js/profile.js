@@ -1,5 +1,6 @@
 import { loadDarkMode, loadCrazyMode, toggleDarkMode, toggleCrazyMode } from "../Colormodes/colormodes.js";
 import { bodyElement, darkButton, crazyButton } from "../lib/data.js";
+import { loadNumbers } from "../ProfileNumbers/profilenumbers.js";
 
 //activates the button upon click
 
@@ -11,4 +12,5 @@ crazyButton.addEventListener("click", toggleCrazyMode);
 document.addEventListener("DOMContentLoaded", () => {
   loadDarkMode();
   loadCrazyMode();
+  loadNumbers();
 })
