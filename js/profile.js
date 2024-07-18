@@ -1,4 +1,9 @@
-import { loadDarkMode, loadCrazyMode, toggleDarkMode, toggleCrazyMode } from "../Colormodes/colormodes.js";
+import {
+  loadDarkMode,
+  loadCrazyMode,
+  toggleDarkMode,
+  toggleCrazyMode,
+} from "../Colormodes/colormodes.js";
 import { bodyElement, darkButton, crazyButton } from "../lib/data.js";
 import { loadNumbers } from "../ProfileNumbers/profilenumbers.js";
 
@@ -13,4 +18,4 @@ document.addEventListener("DOMContentLoaded", () => {
   loadDarkMode();
   loadCrazyMode();
   loadNumbers();
-})
+});

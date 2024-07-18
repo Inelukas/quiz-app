@@ -30,7 +30,6 @@ export function loadCrazyMode() {
   }
 }
 
-
 //toggles dark/crazy mode upon clicking the button and saves the state in a local file
 
 export function toggleDarkMode() {

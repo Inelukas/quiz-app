@@ -1,52 +1,52 @@
 .navbar {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    height: 70px;
-    margin-top: 20vh;
-    background-color: var(--secondary-color);
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    z-index: 2;
-  }
-  
-  .navbar img {
-    width: 55px;
-    padding: 10px;
-    position: relative;
-    bottom: 10px;
-    z-index: 2;
-  }
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 70px;
+  margin-top: 20vh;
+  background-color: var(--secondary-color);
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  z-index: 2;
+}
 
+.navbar img {
+  width: 55px;
+  padding: 10px;
+  position: relative;
+  bottom: 10px;
+  z-index: 2;
+}
+
+.iconbackground {
+  width: 55px;
+  height: 55px;
+  padding: 10px;
+  position: relative;
+  bottom: 68px;
+  background-color: var(--hover-color);
+  border-radius: 50%;
+  display: none;
+}
+
+.icon1,
+.icon2,
+.icon3,
+.icon4 {
+  margin-top: 5px;
+  padding: 10px;
+}
+
+.icon1:hover,
+.icon2:hover,
+.icon3:hover,
+.icon4:hover {
   .iconbackground {
-    width: 55px;
-    height: 55px;
-    padding: 10px;
-    position: relative;
-    bottom: 68px;
-    background-color: var(--hover-color);
-    border-radius: 50%;
-    display: none;
-  }
-  
-  .icon1,
-  .icon2,
-  .icon3,
-  .icon4 {
-    margin-top: 5px;
-    padding: 10px;
-  }
-  
-  .icon1:hover,
-  .icon2:hover,
-  .icon3:hover,
-  .icon4:hover {
-    .iconbackground {
-      display: block;
-    }
-  }
-
-  .clicked {
     display: block;
   }
+}
+
+.clicked {
+  display: block;
+}

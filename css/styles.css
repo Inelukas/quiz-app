@@ -5,14 +5,15 @@
 @import "profile.css";
 
 :root {
-  --primary-color: #FFC7ED;
-  --secondary-color: #7D8ABC;
+  --primary-color: #ffc7ed;
+  --secondary-color: #7d8abc;
   --tertiary-color: #304463;
   --side-color: lightpink;
   --element-color: #ffffff;
   --element-color2: black;
   --hover-color: lightblue;
-  --background-color: #FFF8DB;
+  --background-color: #fff8db;
+  --fetchedcard-color: lightpink;
 }
 
 * {
@@ -25,19 +26,20 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var( --background-color);
+  background-color: var(--background-color);
   margin-bottom: 10vh;
 }
 
 .dark {
-  --primary-color: #FFF8DB;
-  --secondary-color: #7D8ABC;
-  --tertiary-color: #7D8ABC;
-  --side-color: #7D8ABC;
+  --primary-color: #fff8db;
+  --secondary-color: #7d8abc;
+  --tertiary-color: #7d8abc;
+  --side-color: #7d8abc;
   --element-color: black;
   --element-color2: #ffffff;
   --hover-color: lightblue;
   --background-color: #304463;
+  --fetchedcard-color: #c3c3bf;
 }
 
 .crazy {
@@ -47,57 +49,62 @@ body {
 
 @keyframes bgcolor {
   0% {
-    --primary-color: #7D8ABC;
-  --secondary-color: #304463;
-  --tertiary-color: lightpink;
-  --side-color: #ffffff;
-  --element-color: black;
-  --element-color2: lightblue;
-  --hover-color: #FFF8DB;
-  --background-color: #FFC7ED;
+    --primary-color: #7d8abc;
+    --secondary-color: #304463;
+    --tertiary-color: lightpink;
+    --side-color: #ffffff;
+    --element-color: black;
+    --element-color2: lightblue;
+    --hover-color: #fff8db;
+    --background-color: #ffc7ed;
+    --fetchedcard-color: #c3c3bf;
   }
 
   30% {
     --primary-color: #304463;
-  --secondary-color: lightpink;
-  --tertiary-color: #ffffff;
-  --side-color: black;
-  --element-color: lightblue;
-  --element-color2: #FFF8DB;
-  --hover-color: #FFC7ED;
-  --background-color: #7D8ABC;
+    --secondary-color: lightpink;
+    --tertiary-color: #ffffff;
+    --side-color: black;
+    --element-color: lightblue;
+    --element-color2: #fff8db;
+    --hover-color: #ffc7ed;
+    --background-color: #7d8abc;
+    --fetchedcard-color: #black;
   }
 
   60% {
-    --primary-color: lightpink;
-  --secondary-color: #ffffff;
-  --tertiary-color: black;
-  --side-color: lightblue;
-  --element-color: #FFF8DB;
-  --element-color2: #FFC7ED;
-  --hover-color: #7D8ABC;
-  --background-color: #304463;
+    --primary-color: #ffb6c1;
+    --secondary-color: #ffffff;
+    --tertiary-color: black;
+    --side-color: lightblue;
+    --element-color: #fff8db;
+    --element-color2: #ffc7ed;
+    --hover-color: #7d8abc;
+    --background-color: #304463;
+    --fetchedcard-color: #ffb6c1;
   }
 
   90% {
     --primary-color: #ffffff;
-  --secondary-color: black;
-  --tertiary-color: lightblue;
-  --side-color: #FFF8DB;
-  --element-color: #FFC7ED;
-  --element-color2: #7D8ABC;
-  --hover-color: #304463;
-  --background-color: lightpink;
+    --secondary-color: black;
+    --tertiary-color: lightblue;
+    --side-color: #fff8db;
+    --element-color: #ffc7ed;
+    --element-color2: #7d8abc;
+    --hover-color: #304463;
+    --background-color: lightpink;
+    --fetchedcard-color: #lightblue;
   }
 
   100% {
     --primary-color: black;
-  --secondary-color: lightblue;
-  --tertiary-color: #FFF8DB;
-  --side-color: #FFC7ED;
-  --element-color: #7D8ABC;
-  --element-color2: #304463;
-  --hover-color: lightpink;
-  --background-color: #ffffff;
+    --secondary-color: lightblue;
+    --tertiary-color: #fff8db;
+    --side-color: #ffc7ed;
+    --element-color: #7d8abc;
+    --element-color2: #304463;
+    --hover-color: lightpink;
+    --background-color: #ffffff;
+    --fetchedcard-color: #304463;
   }
 }

@@ -1,6 +1,6 @@
 .question_card {
   position: relative;
-  min-width: 400px;
+  min-width: 350px;
   max-width: 30vw;
   min-height: 20vh;
   background-color: var(--primary-color);
@@ -14,7 +14,7 @@
   word-wrap: break-word;
 }
 
-.question_card > button {
+.answerbutton {
   border-color: var(--side-color);
   margin-top: 10px;
   padding: 10px;
@@ -35,10 +35,6 @@
 .answer {
   margin-top: 15px;
   margin-bottom: 10px;
-}
-
-.hidden {
-  display: none;
 }
 
 .hashtags {
@@ -67,4 +63,62 @@
 .icon:hover {
   transform: scale(1.5);
   transition: 1s;
+}
+
+.delete-button {
+  position: absolute;
+  background-color: white;
+  bottom: 10px;
+  right: 10px;
+  color: rgb(118, 11, 11);
+  height: 20px;
+  width: 30px;
+  font-size: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.delete-button:hover {
+  transform: scale(1.2);
+}
+
+.fetched {
+  background: var(--fetchedcard-color);
+}
+
+.popup {
+  border: 1px solid;
+  position: fixed;
+  display: grid;
+  place-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.popup div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 20px;
+  gap: 10px;
+  align-items: center;
+  justify-self: center;
+  background: var(--tertiary-color);
+  color: white;
+  width: 40vw;
+  height: 20vh;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.popup div button {
+  width: 50%;
+}
+
+.popup button:hover {
+  transform: scale(1.3);
+}
+
+.hidden {
+  display: none;
 }

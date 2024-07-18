@@ -1,8 +1,11 @@
-import { addAnswerButtonListeners, loadCardsOnBookmarkPage } from "../Cards/Cards.js";
+import {
+  addAnswerButtonListeners,
+  loadCardsOnBookmarkPage,
+  deleteButton,
+} from "../Cards/Cards.js";
 import { loadDarkMode } from "../Colormodes/colormodes.js";
 import { loadCrazyMode } from "../Colormodes/colormodes.js";
 import { addBookmarkListeners } from "../Bookmarks/bookmarks.js";
-
 
 document.addEventListener("DOMContentLoaded", () => {
   loadDarkMode();
@@ -10,4 +13,5 @@ document.addEventListener("DOMContentLoaded", () => {
   loadCardsOnBookmarkPage();
   addAnswerButtonListeners();
   addBookmarkListeners();
+  deleteButton();
 });
