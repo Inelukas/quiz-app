@@ -56,7 +56,6 @@ export function deleteButton() {
     if (!deleteButton.hasListener) {
       deleteButton.addEventListener("click", () => {
         currentCardToDelete = deleteButton;
-        console.log(currentCardToDelete);
         popupElement.classList.toggle("hidden");
       });
       deleteButton.hasListener = true;
@@ -73,7 +72,6 @@ export function deleteButton() {
 
   if (!confirmButton.hasListener) {
     confirmButton.addEventListener("click", () => {
-      console.log(currentCardToDelete);
       if (currentCardToDelete) {
         const cardAttribute = currentCardToDelete.getAttribute("id");
         const currentCard = document.querySelector(cardAttribute);
@@ -88,6 +86,16 @@ export function deleteButton() {
           "cardsArray",
           JSON.stringify(cardsArrayWithoutDeletedCard)
         );
+        let localBookmarks =
+          JSON.parse(localStorage.getItem("Bookmarks")) || [];
+          if (localBookmarks.includes(cardAttribute)) {const arrayWithoutCurrentBookmark = localBookmarks.filter(
+          (number) => number != cardAttribute
+        );
+        localStorage.setItem(
+          "Bookmarks",
+          JSON.stringify(arrayWithoutCurrentBookmark)
+        );
+      }
         currentCard.parentElement.remove();
         popupElement.classList.toggle("hidden");
         currentCardToDelete = null;
